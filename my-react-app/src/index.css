@@ -1,3 +1,5 @@
+/* This is external styling method. But it could cause naming confilcts when working with large projects */
+
 .card {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 10px;
