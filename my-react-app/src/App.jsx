@@ -4,8 +4,24 @@ import Food from "./Food.jsx";
 import Card from "./Card.jsx";
 import Button from "./Button/Button.jsx";
 import Student from "./Student.jsx";
+import UserGreeting from "./UserGreeting.jsx";
 
 
+function App() {
+  
+  return(
+    <>
+      <UserGreeting isLoggedIn={true} username="Kevin"/>
+      <UserGreeting isLoggedIn={true}/>
+      <UserGreeting/>
+    </>
+  );
+}
+
+export default App;
+
+
+/*
 function App() {
   
   return(
@@ -21,3 +37,5 @@ function App() {
 }
 
 export default App;
+
+*/
