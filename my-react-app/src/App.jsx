@@ -5,7 +5,69 @@ import Card from "./Card.jsx";
 import Button from "./Button/Button.jsx";
 import Student from "./Student.jsx";
 import UserGreeting from "./UserGreeting.jsx";
+import List from "./List.jsx";
 
+
+function App() {
+  
+  const fruits = [
+    {
+      id: 1,
+      name: "apple",
+      calories: 95
+    },
+    {
+      id: 2,
+      name: "orange",
+      calories: 45
+    },
+    {
+      id: 3,
+      name: "banana",
+      calories: 105
+    },
+    {
+      id: 4,
+      name: "pineapple",
+      calories: 37
+    }
+   ];
+
+  const vegetables = [
+    {
+      id: 5,
+      name: "potatoes",
+      calories: 110
+    },
+    {
+      id: 6,
+      name: "celery",
+      calories: 15
+    },
+    {
+      id: 7,
+      name: "carrots",
+      calories: 25
+    },
+    {
+      id: 8,
+      name: "corn",
+      calories: 63
+    }
+   ];
+
+  return(
+    <>
+      <List items={fruits} category="Fruits"/>
+      <List items={vegetables} category="Vegetables"/>
+    </>
+  );
+}
+
+export default App;
+
+
+/*
 
 function App() {
   
@@ -19,6 +81,9 @@ function App() {
 }
 
 export default App;
+
+*/
+
 
 
 /*
