@@ -1,5 +1,41 @@
 import React, {useState} from 'react';
 
+function Counter() {
+
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    // setCount(count + 1); //if we try to write another setCount(count + 1) the count will only increase once because React batches up all and only make a single change for performance optimizations.We use updater functions in that case.
+
+    setCount((prevCount) => prevCount + 1);
+    // setCount((prevCount) => prevCount + 1);
+    // setCount((prevCount) => prevCount + 1); 
+    // //Here we take the pending state to calculate the next state not the current state.We will update it at the end. React puts update function in a queue rather than batching them all together.
+  }
+  const decrement = () => {
+    setCount((prevCount) => prevCount - 1);  }
+  const reset = () => {
+    setCount(prevCount => prevCount = 0); //we dont need this but i just added it to demonstrate how it will be.
+  }
+
+  return(<div className="counter-container">
+          <p className="count-display">Count: {count}</p>
+          <button className="counter-button" onClick={decrement}>Decrement</button>
+          <button className="counter-button" onClick={reset}>Reset</button>
+          <button className="counter-button" onClick={increment}>Increment</button> 
+        </div>);
+}
+
+export default Counter;
+
+
+
+
+
+
+/*
+import React, {useState} from 'react';
+
 function MyComponent() {
 
   const [name, setName] = useState("Guest");
@@ -61,6 +97,8 @@ function MyComponent() {
 }
 
 export default MyComponent;
+
+*/
 
 
 
