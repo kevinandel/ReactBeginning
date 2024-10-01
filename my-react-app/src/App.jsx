@@ -7,8 +7,24 @@ import Student from "./Student.jsx";
 import UserGreeting from "./UserGreeting.jsx";
 import List from "./List.jsx";
 import ButtonOnClick from "./Button/ButtonOnClick.jsx";
+import ProfilePicture from "./ProfilePicture.jsx";
 
 
+function App() {
+
+  return(
+    <>
+      <ProfilePicture/>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+/*
 function App() {
 
   return(
@@ -20,6 +36,7 @@ function App() {
 
 export default App;
 
+*/
 
 
 
