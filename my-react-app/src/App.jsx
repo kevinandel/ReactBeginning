@@ -6,7 +6,24 @@ import Button from "./Button/Button.jsx";
 import Student from "./Student.jsx";
 import UserGreeting from "./UserGreeting.jsx";
 import List from "./List.jsx";
+import ButtonOnClick from "./Button/ButtonOnClick.jsx";
 
+
+function App() {
+
+  return(
+    <>
+      <ButtonOnClick/>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+/*
 
 function App() {
   
@@ -65,6 +82,9 @@ function App() {
 }
 
 export default App;
+
+*/
+
 
 
 /*
