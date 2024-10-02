@@ -2,6 +2,52 @@ import React, {useState, useEffect} from 'react';
 
 function MyComponent() {
 
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+
+  // window.addEventListener("resize", handleResize);
+  // console.log("Event Listener Added");
+  // //here when we do this without useEffect hook every time our page rerenders it generates an eventlistener that is around 1000 times that is poor code
+
+  useEffect(() => {
+     window.addEventListener("resize", handleResize);
+     console.log("Event Listener Added");
+
+     return () => {
+      window.removeEventListener("resize", handleResize)
+      console.log("Event Listener Removed");
+     } //this helps to remove evenlisteners after use. This is another use of useEffect() hook.
+  }, []);
+
+
+  useEffect(() => {
+    document.title = `Size: ${width} x ${height}`
+  }, [width, height]);
+
+  function handleResize() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }
+
+  return(<>
+          <p>Window Width: {width}px</p>
+          <p>Window Height: {height}px</p>
+        </>);
+}
+
+
+export default MyComponent;
+
+
+
+
+
+/*
+
+import React, {useState, useEffect} from 'react';
+
+function MyComponent() {
+
   const [count, setCount] = useState(0);
   const [color, setColor] = useState("green");
 
@@ -41,6 +87,8 @@ function MyComponent() {
 
 
 export default MyComponent;
+
+*/
 
 
 
