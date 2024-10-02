@@ -9,14 +9,13 @@ import List from "./List.jsx";
 import ButtonOnClick from "./Button/ButtonOnClick.jsx";
 import ProfilePicture from "./ProfilePicture.jsx";
 import MyComponent from "./MyComponent.jsx";
+import ComponentA from "./ComponentA.jsx";
 
 
 function App() {
 
   return(
-    <>
-      <MyComponent/>
-    </>
+    <ComponentA/>
   );
 }
 
