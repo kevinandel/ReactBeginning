@@ -10,12 +10,15 @@ import ButtonOnClick from "./Button/ButtonOnClick.jsx";
 import ProfilePicture from "./ProfilePicture.jsx";
 import MyComponent from "./MyComponent.jsx";
 import ComponentA from "./ComponentA.jsx";
+import ChildrenProp from "./ChildrenProp.jsx";
 
 
 function App() {
 
   return(
-    <MyComponent/>
+    <ChildrenProp>
+      <p>This is passed as child prop</p>
+    </ChildrenProp>
   );
 }
 
